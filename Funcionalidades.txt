@@ -1,0 +1,63 @@
+1. Insertar el tamaño de la superficie en la que se puedo mover el auto X,Y
+
+Como: Usuario del controlador
+Quiero: poder ingresar el tamaño de la superficie en la que se desplazara el auto
+Para: poder obtener su ubicacion o desplazamiento
+Criterios de confirmacion:
+    -cuando tengo una cadena de un numero deberia mostra X y Y como el numero. Ejem "5" -> X=5,Y=5 -> 5,5
+    -Si envio "4,8" entonces X=4, Y=8 deberia mostrar los numeros de la siguiente manera: 4,8
+
+
+2. Insertar la posicion inicial del auto
+
+Como: Usuario del controlador
+Quiero: poder ingresar la posicion inicial del auto
+Para: indicarle cuales son sus coordenadas de partida dentro de la superficie de desplazamiento
+Criterios de confirmacion:
+    - cuando tengo una cadena tengo que separara el tamaño de superficie y posicion inicial
+    - cuando tengo una cadena con posicion inicial deberia mostrar x,y en numeros. Ejem. /1,5 -> pos inicial= 1,5
+
+
+3. Adicionar la orientacion del auto a su posicion inicial
+
+Como: Usuario del controlador
+Quiero: indicarle hacia que direccion apunta el auto
+Para: un mejor control de su desplazamiento
+Criterios de confirmacion:
+    - cuando tengo una cadena, reconocer la orientacion en la seccion de pocicion inicial
+    - cuando reconozca el caracter de direccion, determinar si apunta al N, E, O o S.
+
+
+4. Insertar en que dirección girara el auto
+
+Como: Usuario del controlador
+Quiero: indicarle a que direccion debe girar
+Para: que el auto se mueva en la direccion que deseo
+Criterios de confirmacion:
+    - cuando tengo una cadena reconocer una tercera seccion donde se encontrara los comandos de giro
+    - si recibe "I" debe girar izquierda y cambiar su orientacion ejem. apunta a N, debe cambiar a O.
+    - si recibe "D" debe girar derecha y cambiar su orientacion. ejem. apunta a E, debe cambiar a S.
+    - si recibe "ID" debe girar a la izquierda, cambiar su orientacion, luego girar derecha, cambiar 
+        su orientacion nuevamente. Esto llevara a que termine en la misma orientacion en la que comenzo.
+
+
+5. Adicionar la acción de avanzar ya sea hacia la orientacion que se encuentra o despues de cambiar de orientacion
+
+Como: Usuario del controlador
+Quiero: indicarle que debe avanzar
+Para: que el auto avance una posicion en la superficie en caso de tener espacio para hacerlo
+Criterios de confirmacion:
+    - Si en la cadena de comandos recibe una cadena "A", el auto debe avanzar una posicion hacia adelante.
+    - si recibe una cadena "A" y el auto se encuntra de frente con algun limite de la superficie de dezplazamiento el auto conserva su posicion
+    - cuando tengo una cadena "AA"el auto avanza dos posiciones una por cada "A" de la cadena
+    - si tengo una cadena "IA" el auto cambia su orientacion y luego avanza.
+
+
+6. Mostrar las coordenadas y orientacion final del auto
+
+Como: Usuario del controlador
+Quiero: ver las cooordenadas finales del auto
+Para: comprobar que el auto cumplio con los comandos enviados
+Criterios de confirmacion:
+    - deseo ver una cadena que muestre la posicion final x,y mas la direccion hacia la que termino el auto.
+        Ejem. 2,5 E
