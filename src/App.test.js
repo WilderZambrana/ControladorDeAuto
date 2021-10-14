@@ -13,8 +13,13 @@ describe("Superficie de desplazamiento", () => {
 });
 
 describe("Posicion Inicial", () => {
-    it("Deberia delvover la cadena 1,3 para una cadena con superficie y posicicion inicial 5,6/1,3", () => {
+    it("Deberia delvover la cadena 5,5/1,3 para una cadena con superficie y posicicion inicial 5,6/1,3", () => {
+        expect(posFinal("5/1,3")).toEqual("5,5/1,3");
+      });
+    it("Deberia delvover la cadena 5,6/1,3 para una cadena con superficie y posicicion inicial 5,6/1,3", () => {
       expect(posFinal("5,6/1,3")).toEqual("5,6/1,3");
     });
-
+    it("Deberia delvover la cadena 5,6/1,3 N para una cadena con superficie y posicicion inicial 5,6/1,3 N", () => {
+        expect(posFinal("5,6/1,3 N")).toEqual("5,6/1,3 N");
+      });
 });

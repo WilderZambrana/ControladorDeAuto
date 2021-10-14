@@ -4,9 +4,17 @@ function posFinal(cadena){
     if(partesCadena.length>1){
         const superficie = partesCadena[0].split(",");
         const inicio = partesCadena[1].split(",");
-        if(superficie.length>1)
-            return Number(superficie[0])+","+Number(superficie[1])+"/"+Number(inicio[0])+","+Number(inicio[1])
-        return Number(superficie[0])+","+Number(superficie[1])+"/"+Number(inicio[0])+","+Number(inicio[1])
+        const direccion = inicio[1].split(" ");
+        if(direccion.length>1){
+            if(superficie.length>1)
+                return Number(superficie[0])+","+Number(superficie[1])+"/"+Number(inicio[0])+","+Number(direccion[0])+" "+direccion[1]
+            return Number(superficie)+","+Number(superficie)+"/"+Number(inicio[0])+","+Number(direccion[0])+" "+direccion[1]
+        }
+        else{
+            if(superficie.length>1)
+                return Number(superficie[0])+","+Number(superficie[1])+"/"+Number(inicio[0])+","+Number(inicio[1])
+            return Number(superficie)+","+Number(superficie)+"/"+Number(inicio[0])+","+Number(inicio[1])
+        }        
     }
     else{
         const superficie = cadena.split(",")
