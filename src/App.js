@@ -25,7 +25,12 @@ function posFinal(cadena) {
             }
             else{
                 if(comando=="S"){
-                    let num = Number(inicio[0])+2;
+                    if(Number(inicio[0])==Number(superficie[0])){
+
+                    }else{
+                        let num = Number(inicio[0])+2;
+                    }
+                    
                     inicio[0]=num.toString();
                 }
             }
