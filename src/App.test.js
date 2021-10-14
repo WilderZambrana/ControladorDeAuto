@@ -40,4 +40,7 @@ describe("Salto auto", () => {
     it("Deberia devolver la cadena 5,7/3,1 E para una cadena 5,7/1,1 E/S", () => {
         expect(posFinal("5,7/1,1 E/S")).toEqual("5,7/3,1 E");
     });
+    it("Deberia devolver la cadena 5,7/5,1 E para una cadena 5,7/5,1 E/S. En este caso no debe salirse de los limites de la SUP", () => {
+        expect(posFinal("5,7/5,1 E/S")).toEqual("5,7/5,1 E");
+    });
 });
