@@ -23,3 +23,15 @@ describe("Posicion Inicial", () => {
         expect(posFinal("5,6/1,3 N")).toEqual("5,6/1,3 N");
       });
 });
+
+describe("Movimiento auto", () => {
+    it("Deberia devolver la cadena 5,7/1,3 O para una cadena 5,7/1,3 N/I", () => {
+        expect(posFinal("5,7/1,3 N/I")).toEqual("5,7/1,3 O");
+    });
+    it("Deberia devolver la cadena 5,7/1,3 S para una cadena 5,7/1,3 O/I", () => {
+        expect(posFinal("5,7/1,3 O/I")).toEqual("5,7/1,3 S");
+    });
+    it("Deberia devolver la cadena 5,7/1,3 N para una cadena 5,7/1,3 E/I", () => {
+        expect(posFinal("5,7/1,3 E/I")).toEqual("5,7/1,3 N");
+    });
+});
