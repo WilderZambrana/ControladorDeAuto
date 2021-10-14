@@ -35,3 +35,9 @@ describe("Movimiento auto", () => {
         expect(posFinal("5,7/1,3 E/I")).toEqual("5,7/1,3 N");
     });
 });
+
+describe("Salto auto", () => {
+    it("Deberia devolver la cadena 5,7/3,1 E para una cadena 5,7/1,1 E/S", () => {
+        expect(posFinal("5,7/1,1 E/S")).toEqual("5,7/3,1 E");
+    });
+});

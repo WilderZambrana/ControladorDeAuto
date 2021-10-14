@@ -23,6 +23,12 @@ function posFinal(cadena) {
                     }
                 }
             }
+            else{
+                if(comando=="S"){
+                    let num = Number(inicio[0])+2;
+                    inicio[0]=num.toString();
+                }
+            }
             if (superficie.length > 1)
                 return Number(superficie[0]) + "," + Number(superficie[1]) + "/" + Number(inicio[0]) + "," + Number(direccion[0]) + " " + direccion[1]
             return Number(superficie) + "," + Number(superficie) + "/" + Number(inicio[0]) + "," + Number(direccion[0]) + " " + direccion[1]
